@@ -1,25 +1,335 @@
-body{
-    font-family: 'Ubuntu', sans-serif;
+body {
+    font-family: 'Roboto', sans-serif;
     margin: 0;
-    padding: 0
-    ;
+    padding: 0;
 }
-header{
-    background-color: grey;
+
+p {
+    font-weight: lighter;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/**Header*/
+header {
+    background-color: rgba(53, 58, 64, 255);
     color: white;
+    padding: 0 8%;
 }
-.container{
+
+.container {
     display: flex;
-  max-width: 1500px;
-  width: 80%;
-  place-content: space-between;
+    width: 100%;
+    place-content: space-between;
+    padding: 0% 0 1% 0;
 }
+
 .logo {
     display: flex;
-  }
-.barra ul{
+    align-items: center;
+}
+
+.logoHeader {
+    width: 150px;
+    padding: 0;
+    margin: 0;
+}
+
+.listaHeader {
+    color: #989b99;
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+.barra {
+    display: flex;
+    align-items: center;
+    width: max-content;
+}
+
+.barra ul {
     display: flex;
 }
-#comprar{
-    color:green
+
+.barra li {
+    margin: 0 10px;
+}
+
+#comprar {
+    color: green
+}
+
+/* conferencia Bs As */
+.conferencia {
+    background-image: url(./ba1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-y: 49%;
+    padding: 15% 10% 8% 50%;
+    min-height: max-content;
+    position: relative;
+}
+
+.conferencia::before {
+    position: absolute;
+    content: "";
+    inset: 0;
+    background-color: rgba(0, 0, 0, .53);
+}
+
+.textoConferencia {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    color: white;
+    position: relative;
+}
+
+.textoConferencia h1 {
+    text-align: end;
+    padding: 0;
+    font-size: 2.4em;
+    font-weight: normal;
+}
+
+.textoConferencia h5 {
+    font-size: 1.5em;
+    text-align: end;
+    font-weight: lighter;
+    margin: 5% 0;
+}
+
+.botonesConferencia {
+    display: flex;
+    justify-content: end;
+}
+
+.boton {
+    border: 1px solid rgb(255, 255, 255);
+    color: white;
+    font-weight: normal;
+    border-radius: 8px;
+    padding: 2% 1%;
+    margin: 0 15px;
+    font-size: 1.5em;
+    width: 210px;
+    text-align: center;
+}
+
+.orador:hover {
+    border: 1px solid rgb(255, 255, 255);
+    color: white;
+    font-weight: normal;
+    border-radius: 8px;
+    padding: 2% 1%;
+    margin: 0 15px;
+    font-size: 1.5em;
+    width: 210px;
+    text-align: center;
+    background-color: rgba(155, 155, 155, 0.23);
+}
+
+#tickets {
+    border: 1px solid rgba(41, 167, 68, 255);
+    background-color: rgba(41, 167, 68, 255);
+}
+
+#tickets:hover {
+    color: white;
+    font-weight: normal;
+    border-radius: 8px;
+    padding: 2% 1%;
+    margin: 0 15px;
+    font-size: 1.5em;
+    width: 210px;
+    text-align: center;
+    background-color: rgba(41, 167, 68, .83);
+}
+
+
+/* oradores */
+
+.oradores {
+    padding: 2% 10%;
+}
+
+.contenedorOradores {
+    text-align: center;
+}
+
+.contenedorOradores h1 {
+    font-weight: bolder;
+}
+
+.tarjetasOradores {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.card {
+    width: 400px;
+    margin: 1%;
+    border: 1px solid lightgray;
+}
+
+.card-img-top {
+    height: 450px;
+}
+
+.btn {
+    font-size: 0.8em;
+    padding: 1%;
+}
+
+.card-title {
+    margin: .5rem;
+}
+
+.card {
+    text-align: initial;
+}
+
+/** octubre **/
+.col-md-4 {
+    flex: 0 0 auto;
+    width: 50%;
+}
+
+.row {
+    flex-wrap: nowrap;
+    background-color: #353a40;
+}
+
+.info {
+    font-weight: lighter;
+    font-size: 1.1em;
+    margin: 0;
+}
+
+.info:hover {
+    font-weight: lighter;
+    font-size: 1.1em;
+    margin: 0;
+}
+
+.col-md-8 {
+    width: 50%;
+}
+
+.card-body h3 {
+    font-size: 2, 5em;
+    color: white;
+}
+
+.texto {
+    color: white;
+    font-size: 1.2em;
+}
+
+
+/**agregar orador**/
+.agregarOrador {
+    justify-content: center;
+    padding: 2% 10%;
+    display: flex;
+}
+
+.hijoOrador {
+    text-align: center;
+    width: 100%;
+    max-width: 900px;
+}
+
+.hijoOrador h4 {
+    font-weight: lighter;
+}
+
+.hijoOrador h1 {
+    font-size: 3.4em;
+}
+
+.hijoOrador h3 {
+    font-weight: lighter;
+}
+
+.parent {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 0.4fr 2fr 0.2fr 0.5fr;
+    grid-column-gap: 50px;
+    grid-row-gap: 27px;
+}
+
+.div1 {
+    grid-area: 1 / 2 / 2 / 3;
+}
+
+.div2 {
+    grid-area: 1 / 1 / 2 / 2;
+}
+
+.div3 {
+    grid-area: 2 / 1 / 3 / 3;
+}
+
+.div4 {
+    grid-area: 3 / 1 / 4 / 3;
+    margin: 0;
+    text-align: initial;
+    color: gray;
+}
+
+.div5 {
+    grid-area: 4 / 1 / 5 / 3;
+}
+
+.estiloForm {
+    font-size: 1.5em;
+    max-height: 200px;
+    border: 1px solid lightgray;
+    font-weight: lighter;
+    padding: 2%;
+    border-radius: 5px;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: rgb(150, 201, 62);
+    border-color: rgb(150, 201, 62);
+}
+
+.btn {
+    font-size: 1.2em;
+    padding: 1.5%;
+}
+
+
+
+
+
+
+
+
+/* footer */
+.nav {
+    background-color: #1d3947;
+    height: 100px;
+}
+
+.nav a {
+    align-items: center;
+    height: 100%;
+    display: flex;
+}
+
+.nav-link {
+    color: white;
 }
