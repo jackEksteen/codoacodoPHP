@@ -66,6 +66,37 @@ header {
     color: green
 }
 
+@media only screen and (max-width: 1530px) and (min-width: 800px) {
+    .logo h3{
+        overflow: hidden;
+        display: none;
+    }
+}
+@media only screen and (max-width: 799px) {
+    header {
+        padding: 0;
+        display: flex;
+        justify-content: center;
+    }
+    .container{
+        flex-direction: column;
+        margin: 0;
+    }
+    .logo{
+        justify-content: center;
+    }
+    .barra{
+        width: 100%;
+    }
+    .barra ul{
+        padding: 0;
+    }
+}
+
+
+
+
+
 /* conferencia Bs As */
 .conferencia {
     background-image: url(./imagenes/ba1.jpg);
