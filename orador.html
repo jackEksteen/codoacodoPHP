@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¡Convertite en orador!</title>
+
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=AR+One+Sans&family=Roboto:wght@300;900&family=Ubuntu&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=AR+One+Sans&family=Roboto:wght@300;500;900&family=Ubuntu&display=swap"
+        rel="stylesheet">
+
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <!-- css -->
+    <link rel="stylesheet" href="./css/estilosOrador.css">
+
+    <!-- favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png">
+    <link rel="manifest" href="./favicon/site.webmanifest">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="./css/imagenes/codoacodo.png" class="logoHeader">
+                <h3>Conferencia Buenos Aires</h3>
+            </div>
+            <div class="barra">
+                <ul>
+                    <li><b><a href="" class="listaHeader" style="color: white;">La Conferencia</a></b></li>
+                    <li><a href="" class="listaHeader">Los Oradores</a></li>
+                    <li><a href="" class="listaHeader">¿Cuándo y dónde?</a></li>
+                    <li><a href="" class="listaHeader">Conviértete en orador</a></li>
+                    <li><a href="" class="listaHeader" style="color: #2c9b44;">Comprar Tickets</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <main>
+
+
+        <div class="contenedor-main">
+
+            <div class="contenedor-descuento">
+                <div class="card border-primary " style="width: 18rem;">
+                    <div class="card-body">
+                        <h3 class="card-title">Estudiante</h3>
+                        <h5 class="card-subtitle mb-2 text-muted">Tienen un descuento</h5>
+                        <h2>80%</h2>
+                        <h6 class="card-subtitle mb-2 text-muted">* presentar documentación</h6>
+                    </div>
+                </div>
+
+                <div class="card border-success " style="width: 18rem;">
+                    <div class="card-body">
+                        <h3 class="card-title">Trainee</h3>
+                        <h5 class="card-subtitle mb-2 text-muted">Tienen un descuento</h5>
+                        <h2>50%</h2>
+                        <h6 class="card-subtitle mb-2 text-muted">* presentar documentación</h6>
+                    </div>
+                </div>
+
+                <div class="card border-warning " style="width: 18rem;">
+                    <div class="card-body">
+                        <h3 class="card-title">Junior</h3>
+                        <h5 class="card-subtitle mb-2 text-muted">Tienen un descuento</h5>
+                        <h2>15%</h2>
+                        <h6 class="card-subtitle mb-2 text-muted">* presentar documentación</h6>
+                    </div>
+                </div>
+            </div>
+
+            <div class="texto">
+                <h7>VENTA</h7>
+                <h1>VALOR DE TICKET $200</h1>
+            </div>
+
+            <div class="formulario-pago">
+                <form class="row g-3">
+                    <div class="col-md-6">
+                        <input type="text" class="form-control" required id="nombre" placeholder="NOMBRE">
+                    </div>
+                    <div class="col-md-6">
+                        <input type="text" class="form-control" required id="apellido" placeholder="APELLIDO">
+                    </div>
+                    <div class="col-12">
+                        <input type="mail" class="form-control" required id="correo" placeholder="CORREO">
+                    </div>
+                    <div class="col-md-4">
+                        <label for="categoria" class="form-label">CATEGORIA</label>
+                        <select id="categoria" class="form-select">
+                            <option value="estudiante">Estudiante</option>
+                            <option value="trainee">Trainee</option>
+                            <option value="junior">Junior</option>
+                        </select>
+
+                    </div>
+                    <div class="col-md-4">
+                        <label for="cantidad" class="form-label">CANTIDAD</label>
+                        <select id="cantidad" class="form-select">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                        </select>
+                    </div>
+
+                    <button type="button" class=" factura btn btn-primary" disabled data-bs-toggle="button" autocomplete="off">Total a pagar: $</button>
+                        
+                        <div class="botones">
+                            <button type="button" class="boton  " onclick="borrarForm()">Borrar</button>
+                            <button type="button" class="boton  " onclick="calcularBoleto()">Resumen</button>
+                        </div>                   
+                </form>
+            </div>
+
+        </div>
+
+    </main>
+
+    <!-- footer -->
+    <footer>
+        <ul class="nav justify-content-center">
+            <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Preguntas frecuentes</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Contactanos</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">prensa</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Conferencia</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Terminos y Condiciones</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Privacidad</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Estudiantes</a>
+            </li>
+        </ul>
+    </footer>
+
+    <!-- JS -->
+    <script src="./JS/index.js"></script>
+
+</body>
+
+</html>
