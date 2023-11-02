@@ -4,17 +4,11 @@ body {
     padding: 0;
 }
 
-p {
-    font-weight: lighter;
-}
+p {font-weight: lighter;}
 
-ul {
-    list-style: none;
-}
+ul {list-style: none;}
 
-a {
-    text-decoration: none;
-}
+a {text-decoration: none; color: white;}
 
 
 
@@ -166,10 +160,10 @@ main {
 .boton:hover {
     background-color: rgb(168, 206, 103);
 }
-.boton:focus {
+/* .boton:focus {
     background-color: rgb(245, 240, 240);
     color:  rgb(151, 201, 62);
-}
+} */
 .factura {
     text-align: start;
     width: 98%;
@@ -181,4 +175,7 @@ main {
     color: #194fa5;
     background-color: rgb(204, 229, 255);
     border-color: rgb(204, 229, 255);
+  }
+  #ticketFinal{
+    visibility: hidden;
   }
